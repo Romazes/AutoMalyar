@@ -1,13 +1,50 @@
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-primary">
-      <div className="z-10 w-full max-w-5xl items-center justify-between text-sm lg:flex font-dameron">
-        Auto malyar
-      </div>
+import { Button } from "@/components/Buttons";
 
-      <div className="z-10 w-full max-w-5xl items-center justify-between text-sm lg:flex font-jost">
-        Some Jost text
+const Home = () => {
+  return (
+    <main className="text-white">
+      <div>
+        <h1 className="font-dameron leading-default-normal   text-6-5xl">
+          Auto
+          <br />
+          malyar
+        </h1>
       </div>
+      <div className="mt-20">
+        <p className="font-jost text">
+          Професіональне фарбування авто,
+          <br />а також виправлення будь-яких дефектів
+        </p>
+      </div>
+      <div className="mt-20">
+        <Button>Почнемо</Button>
+      </div>
+      <div className="flex text-xl text-white/40 mt-20">
+        <div>
+          <h2>ШВИДКО</h2>
+          <h3 className="text-sm text-white/25 mt-6">
+            Швидко, на <br />
+            скільки можливо
+          </h3>
+        </div>
+        <div>
+          <h2>БЕЗПЕЧНО</h2>
+          <h3 className="text-sm text-white/25 mt-6">
+            Безпечно для авто <br />
+            та гаманця
+          </h3>
+        </div>
+        <div>
+          <h2>ЯКІСНО</h2>
+          <h3 className="text-sm text-white/25 mt-6">
+            Найкращий сервіс <br />
+            та матеріали
+          </h3>
+        </div>
+      </div>
+      <div></div>
     </main>
   );
-}
+};
+
+export default Home;
