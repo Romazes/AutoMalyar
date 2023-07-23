@@ -3,6 +3,7 @@ import clsx from "clsx";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 
+import { Navbar } from "@/components/Navbar";
 import { fontDameron, fontJost } from "@/shared/fonts";
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
       <body
         className={clsx("bg-primary", fontDameron.variable, fontJost.variable)}
       >
+        <Navbar />
         {children}
       </body>
     </html>
