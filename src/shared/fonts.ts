@@ -1,14 +1,14 @@
-import localFont from "next/font/local";
+import localFont from 'next/font/local';
 
 export const fontDameron = localFont({
-  src: "../../public/fonts/dameron.ttf",
-  variable: "--font-dameron",
+  src: '../../public/fonts/dameron.ttf',
+  variable: '--font-dameron',
 });
 
 export const fontJost = localFont({
   src: [
-    { path: "../../public/fonts/Jost-Medium.ttf", weight: "500" },
-    { path: "../../public/fonts/Jost-Regular.ttf", weight: "400" },
+    { path: '../../public/fonts/Jost-Medium.ttf', weight: '500' },
+    { path: '../../public/fonts/Jost-Regular.ttf', weight: '400' },
   ],
-  variable: "--font-jost",
+  variable: '--font-jost',
 });

@@ -1,4 +1,4 @@
-import type { FC, SVGProps } from "react";
+import type { FC, SVGProps } from 'react';
 
 type GradientArrowIconProps = SVGProps<SVGSVGElement>;
 
@@ -7,8 +7,6 @@ export const GradientArrowIcon: FC<GradientArrowIconProps> = ({
   height = 492,
   ...props
 }) => {
-//   const viewBox = `0 0 ${width} ${height}`;
-
   return (
     <svg
       {...props}
