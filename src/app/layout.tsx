@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import type { PropsWithChildren } from 'react';
 
 import { Navbar } from '@/components/Navbar';
-import { fontDameron, fontJost } from '@/shared/fonts';
+import { fontDameron, fontJost, fontBirdman } from '@/shared/fonts';
 
 export const metadata: Metadata = {
   title: 'Auto Malyar Kyiv',
@@ -16,7 +16,12 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
   return (
     <html lang="uk">
       <body
-        className={clsx('bg-primary', fontDameron.variable, fontJost.variable)}
+        className={clsx(
+          'bg-primary',
+          fontDameron.variable,
+          fontJost.variable,
+          fontBirdman.variable,
+        )}
       >
         <Navbar />
         {children}

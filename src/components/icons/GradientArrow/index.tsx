@@ -14,9 +14,7 @@ export const GradientArrowIcon: FC<GradientArrowIconProps> = ({
       height={height}
       viewBox="0 0 661 492"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
       strokeWidth="12.4174"
-      strokeMiterlimit="10"
     >
       <path
         d="M357.296 706L653.394 277.759L357.296 -150.483"

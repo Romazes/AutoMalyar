@@ -12,3 +12,8 @@ export const fontJost = localFont({
   ],
   variable: '--font-jost',
 });
+
+export const fontBirdman = localFont({
+  src: '../../public/fonts/birdman.ttf',
+  variable: '--font-birdman',
+});

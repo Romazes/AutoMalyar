@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import FerrariBgImage from '@/../public/images/ferrari-bg.png';
 import { Button } from '@/components/Buttons';
+import { Dyeing } from '@/components/Dyeing';
 import { GradientArrowIcon } from '@/components/icons/GradientArrow';
 
 const Home = () => {
@@ -50,7 +51,7 @@ const Home = () => {
           </div>
         </div>
         <div className="relative grow">
-          <div className="mt-[-67.2px] md:mt-[-118.4px] clear-both overflow-auto w-[432.52px] h-[320px]">
+          <div className="clear-both mt-[-67.2px] h-[320px] w-[432.52px] md:mt-[-118.4px]">
             <GradientArrowIcon />
           </div>
           <div>
@@ -62,6 +63,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Dyeing />
     </main>
   );
 };

@@ -17,7 +17,7 @@ export const HamburgerIcon: FC<HamburgerIconProps> = ({
       stroke={stroke}
       viewBox="0 0 10 10"
       fill="rgba(0,0,0,0)"
-      stroke-linecap="round"
+      strokeLinecap="round"
       {...props}
     >
       <path d="M2,3L5,3L8,3 M2,5L8,5 M2,7L5,7L8,7">
