@@ -20,7 +20,9 @@ export const PaintTypeWithRoundShapeColor: FC<
             'text-primary outline outline-2 outline-offset-2 outline-[#1CFFF1]',
         )}
       ></div>
-      <div className={clsx(isActive && 'text-primary')}>{paintTypeName}</div>
+      <div className={clsx('justify-self-start', isActive && 'text-primary')}>
+        {paintTypeName}
+      </div>
     </div>
   );
 };
