@@ -2,11 +2,14 @@ import Link from 'next/link';
 import React from 'react';
 
 import { HamburgerIcon } from '../icons/Hamburger';
+import { LogoAutoMalyar } from '../icons/Logo';
 
 export const Navbar = () => {
   return (
-    <nav className="ml-9 mr-9 flex h-[92px] items-center justify-between font-jost uppercase text-white/30 md:ml-12 md:mr-12 lg:ml-20 lg:mr-16">
-      <div>LOGO</div>
+    <nav className="sticky top-0 flex h-[92px] items-center justify-between bg-primary font-jost uppercase text-white/30 pl-9 pr-9 md:pl-12 md:pr-12 lg:pl-20 lg:pr-16">
+      <div>
+        <LogoAutoMalyar className="visible md:invisible" width={236} height={86}/>
+      </div>
       <div className="cursor-pointer md:hidden">
         <HamburgerIcon />
       </div>

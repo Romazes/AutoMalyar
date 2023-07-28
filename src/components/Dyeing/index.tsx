@@ -25,7 +25,7 @@ export const Dyeing = () => {
           </p>
         </div>
       </div>
-      <div className="ml-[-2.25rem] bg-primary-light lg:basis-3/4 lg:rounded-l-4xl">
+      <div className="bg-primary-light lg:basis-3/4 lg:rounded-l-4xl">
         <CarPaintingContainer />
       </div>
     </div>
