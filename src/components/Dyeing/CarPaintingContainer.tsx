@@ -27,14 +27,14 @@ export const CarPaintingContainer = () => {
 
   return (
     <div className="grid grid-cols-2 items-center font-jost text-white/50 md:grid-cols-3">
-      <div className="col-span-2 md:col-span-3 mt-16 flex justify-evenly text-xl text-white md:mt-24">
+      <div className="col-span-2 mt-16 flex justify-evenly text-xl text-white md:col-span-3 md:mt-24">
         <button className="uppercase underline underline-offset-6">рама</button>
         <button className="uppercase underline underline-offset-6">
           деталь
         </button>
       </div>
-      <div className="col-span-2 mt-[4.375rem] md:mt-0 md:col-span-1">
-        <div className="grid grid-cols-2 md:grid-cols-1 gap-y-5">
+      <div className="col-span-2 mt-[4.375rem] md:col-span-1 md:mt-0">
+        <div className="grid grid-cols-2 gap-y-5 md:grid-cols-1">
           {paintTypes.map(({ colorClassName, paintTypeName }) => (
             <PaintTypeWithRoundShapeColor
               key={colorClassName}

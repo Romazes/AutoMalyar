@@ -1,37 +1,45 @@
+import clsx from 'clsx';
 import Image from 'next/image';
 
 import { LogoAutoMalyar } from '../icons/Logo';
 
 import FerrariBgImage from '@/../public/images/ferrari_main_shadow.png';
+import GradientArrow from '@/../public/images/gradient-arrow.svg';
 import { Button } from '@/components/Buttons';
-import { GradientArrowIcon } from '@/components/icons/GradientArrow';
 
 export const Main = () => {
+  const heightNavBar = '92px';
+
   return (
-    <div className="flex flex-col-reverse md:flex-row">
+    <div
+      className={clsx(
+        'flex flex-col-reverse md:flex-row',
+        `md:h-[calc(100vh-${heightNavBar})]`,
+      )}
+    >
       <div>
-        <div className="hidden md:block">
+        <div className="ml-9 hidden md:block lg:ml-20">
           <LogoAutoMalyar />
         </div>
-        <div className="">
-          <div className="mt-20">
+        <div className="ml-9 lg:ml-36">
+          <div className="mt-20 md:mt-4 lg:mt-20">
             <p className="text font-jost">
               Професіональне фарбування авто,
               <br />а також виправлення будь-яких дефектів
             </p>
           </div>
-          <div className="mt-20">
+          <div className="lg:mg-20 mt-10 md:mt-4">
             <Button>Почнемо</Button>
           </div>
-          <div className="mt-20 flex font-jost text-xl text-white/40">
-            <div className="mr-14">
+          <div className="mt-20 flex flex-wrap gap-x-14 gap-y-4 font-jost text-xl text-white/40 md:mt-4 md:flex-nowrap lg:mt-20">
+            <div>
               <h2>ШВИДКО</h2>
               <h3 className="mt-6 text-sm text-white/25">
                 Швидко, на <br />
                 скільки можливо
               </h3>
             </div>
-            <div className="mr-14">
+            <div>
               <h2>БЕЗПЕЧНО</h2>
               <h3 className="mt-6 text-sm text-white/25">
                 Безпечно для авто <br />
@@ -48,16 +56,17 @@ export const Main = () => {
           </div>
         </div>
       </div>
-      <div className="relative">
-        <div className="">
-          <GradientArrowIcon className="h-[320px] w-[432.52px] lg:h-[492px] lg:w-[661px]" />
-        </div>
-        <div className="absolute bottom-[-40px]">
-          <Image
-            src={FerrariBgImage}
-            alt="background image"
-          />
-        </div>
+      <div className="relative grow">
+        <Image
+          src={GradientArrow}
+          alt="gradient background image"
+          className="min-h-[267px] min-w-[350px]"
+        />
+        <Image
+          src={FerrariBgImage}
+          alt="background image"
+          className="absolute bottom-[-80px] w-full md:bottom-0"
+        />
       </div>
     </div>
   );
