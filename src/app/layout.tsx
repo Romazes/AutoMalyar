@@ -11,10 +11,11 @@ export const metadata: Metadata = {
   title: 'Auto Malyar Kyiv',
   description:
     'Auto malyar Kyiv: кузовний ремонт, ремонт будь-якої складності, фарбування авто, гарантія на роботу, ремонт авто з США. Київ, Україна.',
-  metadataBase: new URL("https://auto-malyar.vercel.app/"),
+  metadataBase: new URL('https://auto-malyar.vercel.app/'),
   openGraph: {
     title: 'Auto Malyar Kyiv',
-    description: 'Auto malyar Kyiv: кузовний ремонт, ремонт будь-якої складності, фарбування авто, гарантія на роботу, ремонт авто з США. Київ, Україна.',
+    description:
+      'Auto malyar Kyiv: кузовний ремонт, ремонт будь-якої складності, фарбування авто, гарантія на роботу, ремонт авто з США. Київ, Україна.',
     images: [
       {
         url: `/${logo.src}`,

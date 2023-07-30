@@ -1,7 +1,9 @@
-import type { FC, SVGProps } from 'react';
+import type { FC } from 'react';
 import { useId } from 'react';
 
-type LogoIconProps = SVGProps<SVGSVGElement>;
+import type { BaseIconProps } from '@/types/baseIcon';
+
+type LogoIconProps = BaseIconProps;
 
 export const LogoAutoMalyar: FC<LogoIconProps> = ({
   width = 364,

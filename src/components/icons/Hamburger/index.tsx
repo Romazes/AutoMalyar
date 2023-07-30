@@ -1,6 +1,8 @@
-import type { FC, SVGProps } from 'react';
+import type { FC } from 'react';
 
-type HamburgerIconProps = SVGProps<SVGSVGElement>;
+import type { BaseIconProps } from '@/types/baseIcon';
+
+type HamburgerIconProps = BaseIconProps;
 
 export const HamburgerIcon: FC<HamburgerIconProps> = ({
   width = 32,
