@@ -50,7 +50,7 @@ export const CarPaintingContainer = () => {
     },
   ];
 
-  const [cardId, setCarId] = useState(1);
+  const [cardId, setCarId] = useState(0);
   const isActiveLink: boolean = true;
 
   return (
@@ -83,7 +83,10 @@ export const CarPaintingContainer = () => {
       </div>
       <div className="col-span-2 mx-8 mt-20 md:mt-14 md:pr-[90px]">
         <div>
-          <Image src={paintTypes[cardId].paintCarImage} alt="dye-classic" />
+          <Image
+            src={paintTypes[cardId].paintCarImage}
+            alt={paintTypes[cardId].paintName + ' фарба для авто'}
+          />
         </div>
         <div className="mt-11 text-sm">
           Стандартна акрилова фарба для автомобіля має такі переваги:
