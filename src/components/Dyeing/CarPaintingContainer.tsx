@@ -62,10 +62,10 @@ export const CarPaintingContainer = () => {
             isActiveLink && 'text-primary-cyan',
           )}
         >
-          рама
+          повне
         </button>
         <button className="uppercase underline underline-offset-6">
-          деталь
+          окремі деталі
         </button>
       </div>
       <div className="col-span-2 mt-[4.375rem] md:col-span-1 md:mt-0">
