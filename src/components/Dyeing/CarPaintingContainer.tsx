@@ -81,7 +81,7 @@ export const CarPaintingContainer = () => {
           ))}
         </div>
       </div>
-      <div className="col-span-2 mx-8 mt-20 md:mt-14 md:pr-[90px]">
+      <div className="col-span-2 mx-8 mt-20 md:mt-14">
         <div>
           <Image
             src={paintTypes[cardId].paintCarImage}

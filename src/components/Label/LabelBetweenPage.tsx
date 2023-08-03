@@ -19,7 +19,7 @@ export const LabelBetweenPage: FC<LabelBetweenPageProps> = ({ children }) => {
             opacity="0.2"
             d="M1 1L11.5 6.5L22 1"
             stroke="white"
-            stroke-linecap="round"
+            strokeLinecap="round"
           />
         </svg>
       </div>
