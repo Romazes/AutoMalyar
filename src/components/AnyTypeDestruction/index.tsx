@@ -5,15 +5,28 @@ import RightSideDestructionCarImg from '@/../public/images/right-side-destructio
 
 export const AnyTypeDestruction = () => {
   return (
-    <div className="grid lg:grid-cols-2 mt-16 lg:mt-32 font-jost">
-      <div className="order-2 lg:order-1 lg:row-span-2">
+    <div className="mt-16 grid font-jost lg:mt-32 lg:grid-cols-2">
+      <div className="relative order-2 lg:order-1 lg:row-span-2">
+        <div className="absolute left-[37%] top-[19%] h-[150px] w-[150px] overflow-hidden rounded-full border sm:h-[300px] sm:w-[300px] md:left-[37%] md:top-[18.5%] lg:top-[20.5%]">
+          <Image
+            src={RightSideDestructionCarImg}
+            alt="приклад сколу на автівці з правого боку на крилі"
+            quality={50}
+            sizes="(max-width: 639px) 600px, (min-width: 640px) 1000px"
+            style={{
+              objectFit: 'none',
+              objectPosition: '58% 35%',
+              height: '100%',
+            }}
+          />
+        </div>
         <Image
           src={RightSideDestructionCarImg}
           alt="приклад сколу на автівці з правого боку на крилі"
         />
       </div>
       <div className="order-1 flex flex-col">
-        <div className="mx-9 lg:ml-20 lg:mr-32 flex flex-col">
+        <div className="mx-9 flex flex-col lg:ml-20 lg:mr-32">
           <div className="text-center">
             <h2 className="text-2xl uppercase md:text-4xl">
               Будь-яка форма ушкодження
