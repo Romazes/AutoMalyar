@@ -2,6 +2,7 @@ import { Main } from '../components/Main';
 
 import { AnyTypeDestruction } from '@/components/AnyTypeDestruction';
 import { Dyeing } from '@/components/Dyeing';
+import { Restoration } from '@/components/Restoration';
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Main />
       <Dyeing />
       <AnyTypeDestruction />
+      <Restoration />
     </main>
   );
 };
