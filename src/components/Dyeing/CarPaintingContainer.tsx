@@ -5,15 +5,15 @@ import { useState } from 'react';
 
 import { PaintTypeWithRoundShapeColor } from './PaintTypeWithRoundShapeColor';
 
-import ChromePaint from '@/../public/images/chrome-orb.svg';
+import ChromePaint from '@/../public/icons/chrome-orb.svg';
+import ClassicPaint from '@/../public/icons/classic-orb.svg';
+import MattePaint from '@/../public/icons/matte-orb.svg';
+import MetallicPaint from '@/../public/icons/metallic-orb.svg';
+import OilPaint from '@/../public/icons/oil-orb.svg';
 import ChromePaintCar from '@/../public/images/chrome-paint-car.png';
-import ClassicPaint from '@/../public/images/classic-orb.svg';
 import ClassicPaintCar from '@/../public/images/classic-paint-car.png';
-import MattePaint from '@/../public/images/matte-orb.svg';
 import MattePaintCar from '@/../public/images/matte-paint-car.png';
-import MetallicPaint from '@/../public/images/metallic-orb.svg';
 import MetallicPaintCar from '@/../public/images/metallic-paint-car.png';
-import OilPaint from '@/../public/images/oil-orb.svg';
 import OilPaintCar from '@/../public/images/oil-paint-car.png';
 
 export const CarPaintingContainer = () => {

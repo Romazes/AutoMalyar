@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 import { LogoAutoMalyar } from '../icons/Logo';
 
+import GradientArrow from '@/../public/icons/gradient-arrow.svg';
 import FerrariBgImage from '@/../public/images/ferrari_main_shadow.png';
-import GradientArrow from '@/../public/images/gradient-arrow.svg';
 import { Button } from '@/components/Buttons';
 
 export const Main = () => {

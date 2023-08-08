@@ -1,23 +1,37 @@
 import Image from 'next/image';
 import React from 'react';
 
+import { IconTitle } from '../FlexContainer/IconTitle';
+import { BigCrackIcon } from '../icons/BigCrack';
+import { ScratchIcon } from '../icons/Scratch';
+import { SmallCrackIcon } from '../icons/SmallCrack';
+
+import RightSideDestructionCarLensImg from '@/../public/images/right-side-destruction-car-lense.png';
 import RightSideDestructionCarImg from '@/../public/images/right-side-destruction-car.png';
 
 export const AnyTypeDestruction = () => {
+  const fixingCategories = [
+    {
+      icon: <BigCrackIcon />,
+      title: 'Великі сколи',
+    },
+    {
+      icon: <SmallCrackIcon />,
+      title: 'Малі сколи',
+    },
+    {
+      icon: <ScratchIcon />,
+      title: 'Подряпини',
+    },
+  ];
+
   return (
     <div className="mt-16 grid font-jost lg:mt-32 lg:grid-cols-2">
       <div className="relative order-2 lg:order-1 lg:row-span-2">
-        <div className="absolute left-[37%] top-[19%] h-[150px] w-[150px] overflow-hidden rounded-full border sm:h-[300px] sm:w-[300px] md:left-[37%] md:top-[18.5%] lg:top-[20.5%]">
+        <div className="absolute left-[39%] top-[21.5%] h-[150px] w-[150px] sm:h-[300px] sm:w-[300px] lg:top-[20.5%]">
           <Image
-            src={RightSideDestructionCarImg}
-            alt="приклад сколу на автівці з правого боку на крилі"
-            quality={50}
-            sizes="(max-width: 639px) 600px, (min-width: 640px) 1000px"
-            style={{
-              objectFit: 'none',
-              objectPosition: '58% 35%',
-              height: '100%',
-            }}
+            src={RightSideDestructionCarLensImg}
+            alt="збільшене зображення сколу на автівці"
           />
         </div>
         <Image
@@ -57,19 +71,11 @@ export const AnyTypeDestruction = () => {
         </div>
       </div>
       <div className="order-3 mt-16 text-white/40">
-        <div className="text-xl">
+        <div className="ml-12 text-xl md:ml-0">
           <h3>ВИПРАВЛЯЄМО</h3>
         </div>
-        <div className="flex text-white/25">
-          <div>
-            <h4>Великі сколи</h4>
-          </div>
-          <div>
-            <h4>Малі сколи</h4>
-          </div>
-          <div>
-            <h4>Подряпини</h4>
-          </div>
+        <div className="mt-8 grid justify-center gap-x-10 gap-y-8 text-lg text-white/25 md:grid-flow-col md:justify-normal">
+          {fixingCategories.map(({ icon, title }) => IconTitle(icon, title))}
         </div>
       </div>
     </div>
