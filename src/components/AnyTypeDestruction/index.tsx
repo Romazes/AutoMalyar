@@ -12,14 +12,17 @@ import RightSideDestructionCarImg from '@/../public/images/right-side-destructio
 export const AnyTypeDestruction = () => {
   const fixingCategories = [
     {
+      id: 0,
       icon: <BigCrackIcon />,
       title: 'Великі сколи',
     },
     {
+      id: 1,
       icon: <SmallCrackIcon />,
       title: 'Малі сколи',
     },
     {
+      id: 2,
       icon: <ScratchIcon />,
       title: 'Подряпини',
     },
@@ -75,7 +78,9 @@ export const AnyTypeDestruction = () => {
           <h3>ВИПРАВЛЯЄМО</h3>
         </div>
         <div className="mt-8 grid justify-center gap-x-10 gap-y-8 text-lg text-white/25 md:grid-flow-col md:justify-normal">
-          {fixingCategories.map(({ icon, title }) => IconTitle(icon, title))}
+          {fixingCategories.map(({ id, icon, title }) => (
+            <IconTitle key={id} icon={icon} title={title} />
+          ))}
         </div>
       </div>
     </div>
