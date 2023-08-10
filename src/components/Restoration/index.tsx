@@ -1,7 +1,11 @@
 
 import Image from 'next/image';
 
+import ComparisonSlider from '../ComparisonSlider';
+
 import BackgroundNumberImg from '@/../public/images/bg-number-02.png';
+import TopPositionDamagedCar from '@/../public/images/restore-damaged-car.png';
+import BottomPositionFixedCar from '@/../public/images/restore-fixed-car.png';
 
 export const Restoration = () => {
   return (
@@ -36,7 +40,8 @@ export const Restoration = () => {
           </p>
         </div>
       </div>
-      <div className="row-span-2">
+      <div>
+        <ComparisonSlider topImg={TopPositionDamagedCar} bottomImg={BottomPositionFixedCar} />
       </div>
     </div>
   );
