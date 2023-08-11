@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 
 import ComparisonSlider from '../ComparisonSlider';
@@ -34,14 +33,16 @@ export const Restoration = () => {
             <span className="text-primary">просте вирівнювання (PDR)</span>,{' '}
             <span className="text-primary">жорстке вирівнювання</span> - включає
             демонтаж, вирівнювання, фарбування та полірування - і{' '}
-            <span className="text-primary">латання</span>{' '}
-            пошкоджених зон. Все залежить від того, наскільки пошкоджений
-            будь-який компонент.
+            <span className="text-primary">латання</span> пошкоджених зон. Все
+            залежить від того, наскільки пошкоджений будь-який компонент.
           </p>
         </div>
       </div>
       <div>
-        <ComparisonSlider topImg={TopPositionDamagedCar} bottomImg={BottomPositionFixedCar} />
+        <ComparisonSlider
+          topImg={TopPositionDamagedCar}
+          bottomImg={BottomPositionFixedCar}
+        />
       </div>
     </div>
   );

@@ -3,11 +3,11 @@
   "cSpell.words": ["clsx", "Dameron", "Jost"],
   "eslint.validate": [
     "javascript",
-    "javascriptreact", 
-    "typescript", 
+    "javascriptreact",
+    "typescript",
     "typescriptreact"
-  ], 
-  "editor.codeActionsOnSave": { 
-    "source.fixAll.eslint": true, 
-  }, 
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
