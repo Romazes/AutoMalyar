@@ -30,8 +30,13 @@ const ComparisonSlider: FC<IComparisonSliderProps> = ({
       topImageRef.current.getBoundingClientRect() as DOMRect;
     const handleWidth = lineCompareRef.current.offsetWidth as number;
 
-    if (clientXPosition >= left && clientXPosition <= width + left - handleWidth) {
-      lineCompareRef.current.style.left = `${((clientXPosition - left) / width) * 100}%`;
+    if (
+      clientXPosition >= left &&
+      clientXPosition <= width + left - handleWidth
+    ) {
+      lineCompareRef.current.style.left = `${
+        ((clientXPosition - left) / width) * 100
+      }%`;
       topImageRef.current.style.clipPath = `inset(0 ${
         100 - ((clientXPosition - left) / width) * 100
       }% 0 0)`;
@@ -40,10 +45,10 @@ const ComparisonSlider: FC<IComparisonSliderProps> = ({
 
   const handleResize = useCallback(
     (e: MouseEvent | TouchEvent) => {
+      e.preventDefault();
       if (e instanceof MouseEvent) {
         setPositioning(e.clientX);
       } else if (e instanceof TouchEvent) {
-        e.preventDefault();
         setPositioning(e.touches[0].clientX);
       }
     },
@@ -60,7 +65,7 @@ const ComparisonSlider: FC<IComparisonSliderProps> = ({
 
   useEffect(() => {
     if (isResizing) {
-      window.addEventListener('mousemove', handleResize);
+      window.addEventListener('mousemove', handleResize, { passive: false });
       window.addEventListener('touchmove', handleResize, { passive: false });
       window.addEventListener('mouseup', handleResizeEnd);
       window.addEventListener('touchend', handleResizeEnd);
@@ -85,7 +90,7 @@ const ComparisonSlider: FC<IComparisonSliderProps> = ({
   }, [setPositioning]);
 
   return (
-    <div className="relative box-border h-[722px] w-full">
+    <div className="relative ml-auto box-border h-[520px] w-[340px] overflow-hidden lg:h-[722px] lg:w-[470px]">
       <Image
         src={topImg}
         alt={bottomImgAlt}
@@ -101,11 +106,11 @@ const ComparisonSlider: FC<IComparisonSliderProps> = ({
       />
       <div
         ref={lineCompareRef}
-        className="absolute h-full w-[50px] cursor-col-resize"
+        className="absolute h-full cursor-col-resize"
         onMouseDown={() => setIsResizing(true)}
         onTouchStart={() => setIsResizing(true)}
       >
-        <LineDottedFigure />
+        <LineDottedFigure className="h-[520px] lg:h-[722px]" />
       </div>
     </div>
   );

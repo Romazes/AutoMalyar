@@ -9,7 +9,7 @@ import BottomPositionFixedCar from '@/../public/images/restore-fixed-car.png';
 
 export const Restoration = () => {
   return (
-    <div className="relative grid gap-y-9 lg:grid-cols-2">
+    <div className="relative grid gap-y-9 md:grid-cols-2">
       <div className="absolute left-0 top-0 h-[242px] w-[364px] lg:h-[506px] lg:w-[762px]">
         <Image src={BackgroundNumberImg} alt="цифра 02" />
       </div>
@@ -22,7 +22,7 @@ export const Restoration = () => {
             відновлення
           </h2>
         </div>
-        <div className="mt-12 md:mt-24">
+        <div className="mt-12 lg:mt-24">
           <p>
             Відновлюємо будь-яку проблему на вашій рамі. Викликано нещасним
             випадком або з інших причин. Вам потрібно лише показати своє авто
