@@ -28,14 +28,15 @@ const ComparisonSlider: FC<IComparisonSliderProps> = ({
 
     const { left, width } =
       topImageRef.current.getBoundingClientRect() as DOMRect;
-    const handleWidth = lineCompareRef.current.offsetWidth as number;
+    // take half width of interactive line to calculate start of comparison in a right way
+    const handleWidth = lineCompareRef.current.offsetWidth / 2;
 
     if (
-      clientXPosition >= left &&
+      clientXPosition >= left + handleWidth &&
       clientXPosition <= width + left - handleWidth
     ) {
       lineCompareRef.current.style.left = `${
-        ((clientXPosition - left) / width) * 100
+        ((clientXPosition - left - handleWidth) / width) * 100
       }%`;
       topImageRef.current.style.clipPath = `inset(0 ${
         100 - ((clientXPosition - left) / width) * 100
