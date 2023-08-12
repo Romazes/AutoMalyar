@@ -12,7 +12,7 @@ export const Restoration = () => {
       <div className="absolute left-0 top-0 h-[242px] w-[364px] lg:h-[506px] lg:w-[762px]">
         <Image src={BackgroundNumberImg} alt="цифра 02" />
       </div>
-      <div className="mx-9 flex flex-wrap lg:mx-36">
+      <div className="mx-9 grid auto-rows-max lg:mx-36">
         <div className="flex w-full items-baseline">
           <h1 className="font-birdman text-6-5xl text-primary drop-shadow-primary-text md:text-8xl">
             02
