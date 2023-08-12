@@ -2,6 +2,7 @@ import { Main } from '../components/Main';
 
 import { AnyTypeDestruction } from '@/components/AnyTypeDestruction';
 import { Dyeing } from '@/components/Dyeing';
+import { HighQualityAlignment } from '@/components/HighQualityAlignment';
 import { Restoration } from '@/components/Restoration';
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
       <Dyeing />
       <AnyTypeDestruction />
       <Restoration />
+      <HighQualityAlignment />
     </main>
   );
 };
