@@ -42,9 +42,6 @@ module.exports = {
       colors: {
         'primary-cyan': '#1CFFF1',
       },
-      margin: {
-        70: '17rem',
-      },
       gap: {
         30: '1.875rem',
       },

@@ -7,3 +7,55 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.containerRestorationSteps {
+  display: grid;
+  grid-template-areas:
+    '.  numberFirst titleFirst arrowFirst'
+    'arrowSecond numberSecond titleSecond arrowFirst'
+    'arrowSecond numberThird titleThird arrowThird'
+    '. numberFourth titleFourth arrowThird';
+}
+
+@media (min-width: 1024px) {
+  .containerRestorationSteps {
+    display: grid;
+    grid-template-areas: 'numberFirst titleFirst arrowFirst numberSecond titleSecond arrowSecond numberThird titleThird arrowThird numberFourth titleFourth';
+  }
+}
+
+.numberFirst {
+  grid-area: numberFirst;
+}
+.numberSecond {
+  grid-area: numberSecond;
+}
+.numberThird {
+  grid-area: numberThird;
+}
+.numberFourth {
+  grid-area: numberFourth;
+}
+.titleFirst {
+  grid-area: titleFirst;
+}
+.titleSecond {
+  grid-area: titleSecond;
+}
+.titleThird {
+  grid-area: titleThird;
+}
+.titleFourth {
+  grid-area: titleFourth;
+}
+.arrowFirst {
+  grid-area: arrowFirst;
+}
+
+.arrowSecond {
+  grid-area: arrowSecond;
+}
+
+.arrowThird {
+  grid-area: arrowThird;
+}
