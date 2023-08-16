@@ -28,17 +28,17 @@ export const FullRestorationImportedCar = () => {
   };
 
   return (
-    <div>
-      <div className="relative grid md:grid-cols-2">
-        <div className="absolute left-0 top-0 h-[242px] w-[364px] lg:h-[506px] lg:w-[762px]">
-          <Image src={BackgroundNumberImg} alt="цифра 03" />
-        </div>
-        <div className="ml-9 mr-9 grid auto-rows-max lg:ml-36">
+    <div className="relative mt-11">
+      <div className="absolute left-0 top-0 h-[242px] w-[360px] lg:h-[506px] lg:w-[762px]">
+        <Image src={BackgroundNumberImg} alt="цифра 03" />
+      </div>
+      <div className="grid lg:grid-cols-2">
+        <div className="ml-9 grid auto-rows-max lg:ml-36">
           <div className="flex w-full items-center">
             <h1 className="font-birdman text-6-5xl text-primary drop-shadow-primary-text md:text-8xl">
               03
             </h1>
-            <h2 className="ml-6 whitespace-nowrap font-jost text-2xl uppercase md:ml-14 md:text-4xl">
+            <h2 className="ml-6 font-jost text-2xl uppercase md:ml-14 md:text-4xl">
               повна реставрація <br /> пригнанного авто
             </h2>
           </div>
@@ -55,18 +55,18 @@ export const FullRestorationImportedCar = () => {
               чекати дзвінка
             </p>
           </div>
-          <div className="mt-14">
+          <div className="mr-9 mt-14">
             <Button className="w-full text-base">Записатися на Огляд</Button>
           </div>
         </div>
-        <div className="ml-auto max-w-full overflow-hidden">
+        <div className="static ml-auto lg:absolute lg:bottom-0 lg:right-0 lg:top-0 lg:mt-[-80px]">
           <Image
             src={LicensePlates}
             alt="автомобільні номерні знаки з різних країн"
           />
         </div>
       </div>
-      <div className="containerRestorationSteps justify-center gap-30 text-white/40 lg:ml-36 lg:justify-start">
+      <div className="containerRestorationSteps justify-center gap-30 text-white/40 lg:ml-18 lg:mt-30 lg:justify-start">
         <div className="numberFirst text-white/70">I.</div>
         <div className="titleFirst text-white/70">Діагностика/Огляд</div>
         <div className="arrowFirst">{typeArrowShow()}</div>
