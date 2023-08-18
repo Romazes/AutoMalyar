@@ -24,10 +24,12 @@ module.exports = {
         birdman: ['var(--font-birdman)'],
       },
       fontSize: {
+        '4-5xl': '2.5rem',
         '6-5xl': '4rem',
       },
       boxShadow: {
         'xl-btn': '8px 0px 16px 0px rgba(28, 255, 241, 0.25)',
+        'price-tab': '20px 20px 40px 15px rgba(0, 0, 0, 0.25)',
       },
       borderRadius: {
         'btn-3xl': '2.875rem',
@@ -44,7 +46,9 @@ module.exports = {
       },
       margin: {
         18: '4.688rem',
+        19: '4.75rem',
         30: '7.5rem',
+        35: '8.75rem',
       },
       gap: {
         30: '1.875rem',
