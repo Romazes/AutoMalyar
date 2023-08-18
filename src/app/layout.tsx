@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 const RootLayout = async ({ children }: PropsWithChildren) => {
   return (
-    <html lang="uk">
+    <html lang="uk-UA">
       <body
         className={clsx(
           'bg-primary',
