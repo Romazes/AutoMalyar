@@ -4,6 +4,7 @@ import { AnyTypeDestruction } from '@/components/AnyTypeDestruction';
 import { Dyeing } from '@/components/Dyeing';
 import { FullRestorationImportedCar } from '@/components/FullRestorationImportedCar';
 import { HighQualityAlignment } from '@/components/HighQualityAlignment';
+import { InfoContacts } from '@/components/InfoContacts';
 import { PriceListServices } from '@/components/PriceListServices';
 import { Restoration } from '@/components/Restoration';
 import { WorkshopGallery } from '@/components/WorkshopGallery';
@@ -19,6 +20,7 @@ const Home = () => {
       <FullRestorationImportedCar />
       <PriceListServices />
       <WorkshopGallery />
+      <InfoContacts />
     </main>
   );
 };
