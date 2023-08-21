@@ -3,7 +3,7 @@ import { WorkshopGalleryCarousel } from './WorkshopGalleryCarousel';
 
 import Img3 from '@/../public/images/classic-paint-car.png';
 import Img4 from '@/../public/images/gallery-1.png';
-import Img5 from '@/../public/images/gallery-2.jpg';
+import Img5 from '@/../public/images/gallery-2.png';
 import Img1 from '@/../public/images/metallic-paint-car.png';
 import Img2 from '@/../public/images/oil-paint-car.png';
 
