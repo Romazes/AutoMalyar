@@ -6,6 +6,7 @@ import { FullRestorationImportedCar } from '@/components/FullRestorationImported
 import { HighQualityAlignment } from '@/components/HighQualityAlignment';
 import { PriceListServices } from '@/components/PriceListServices';
 import { Restoration } from '@/components/Restoration';
+import { WorkshopGallery } from '@/components/WorkshopGallery';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <HighQualityAlignment />
       <FullRestorationImportedCar />
       <PriceListServices />
+      <WorkshopGallery />
     </main>
   );
 };
