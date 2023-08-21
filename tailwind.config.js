@@ -53,6 +53,9 @@ module.exports = {
       gap: {
         30: '1.875rem',
       },
+      zIndex: {
+        1: '1',
+      },
     },
   },
   plugins: [],
