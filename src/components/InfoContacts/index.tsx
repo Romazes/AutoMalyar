@@ -21,7 +21,7 @@ export const InfoContacts = () => {
           alt="карта розташування майстерні"
         />
       </div>
-      <div className="grid lg:grid-cols-2 pt-11 lg:pt-20">
+      <div className="grid pt-11 lg:grid-cols-2 lg:pt-20">
         <div className="ml-9 lg:ml-36">
           <div className="flex items-center ">
             <h2 className="font-birdman text-3xl text-primary lg:text-5xl">
@@ -31,7 +31,7 @@ export const InfoContacts = () => {
               контакти та інформація
             </h1>
           </div>
-          <div className="mt-11 mr-9 font-jost text-sm lg:mt-20">
+          <div className="mr-9 mt-11 font-jost text-sm lg:mt-20">
             <p>
               Ласкаво просимо до нашої автомайстерні! Ми спеціалізуємося на
               обслуговуванні та відновленні автомобілів, надаючи повний спектр
@@ -58,7 +58,7 @@ export const InfoContacts = () => {
             </p>
           </div>
         </div>
-        <div className="mt-20 grid gap-y-8 lg:rounded-[0px_30px_30px_0px] bg-primary-light pb-9 pl-9 pt-9 font-jost text-sm text-white/50 lg:pl-36">
+        <div className="mt-20 grid gap-y-8 bg-primary-light pb-9 pl-9 pt-9 font-jost text-sm text-white/50 lg:rounded-[0px_30px_30px_0px] lg:pl-36">
           <div className="flex items-center">
             <div className="mr-5">
               <PhoneIcon />

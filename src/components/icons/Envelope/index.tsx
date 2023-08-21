@@ -4,7 +4,11 @@ import type { BaseIconProps } from '@/types/baseIcon';
 
 type EnvelopeIconProps = BaseIconProps;
 
-export const EnvelopeIcon: FC<EnvelopeIconProps> = ({width = 14, height = 12, ...props}) => {
+export const EnvelopeIcon: FC<EnvelopeIconProps> = ({
+  width = 14,
+  height = 12,
+  ...props
+}) => {
   return (
     <svg
       width={width}
