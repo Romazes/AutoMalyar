@@ -10,10 +10,12 @@ interface IImage {
 }
 interface IWorkshopGalleryCarouselProps {
   images: IImage[];
+  intervalChangeImageMilliSecond?: number;
 }
 
 export const WorkshopGalleryCarousel: FC<IWorkshopGalleryCarouselProps> = ({
   images,
+  intervalChangeImageMilliSecond = 3000,
 }) => {
   return (
     <Carousel
@@ -24,6 +26,8 @@ export const WorkshopGalleryCarousel: FC<IWorkshopGalleryCarouselProps> = ({
       showStatus={false}
       preventMovementUntilSwipeScrollTolerance={true}
       swipeScrollTolerance={100}
+      autoPlay={true}
+      interval={intervalChangeImageMilliSecond}
     >
       {images.map((x) => (
         <div key={x.id}>
