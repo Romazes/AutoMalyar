@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import { ContactsContainerItem } from './ContactsContainerItem';
+
 import { EnvelopeIcon } from '../icons/Envelope';
 import { MapIcon } from '../icons/Map';
 import { PhoneIcon } from '../icons/Phone';
@@ -13,6 +15,33 @@ import {
 } from '@/constants/contacts';
 
 export const InfoContacts = () => {
+  const contacts = [
+    {
+      key: 0,
+      icon: <PhoneIcon />,
+      contactDataHumanView: PHONE_MAIN.humanView,
+      contactDataLinkView: `tel:${PHONE_MAIN.machineView}`,
+    },
+    {
+      key: 1,
+      icon: <PhoneIcon />,
+      contactDataHumanView: PHONE_SECOND.humanView,
+      contactDataLinkView: `tel:${PHONE_SECOND.machineView}`,
+    },
+    {
+      key: 2,
+      icon: <EnvelopeIcon />,
+      contactDataHumanView: MAILING_ADDRESS,
+      contactDataLinkView: `mailto:${MAILING_ADDRESS}`,
+    },
+    {
+      key: 3,
+      icon: <MapIcon />,
+      contactDataHumanView: STREET_ADDRESS.name,
+      contactDataLinkView: STREET_ADDRESS.googleURL,
+    },
+  ];
+
   return (
     <div className="relative">
       <div className="absolute left-0 top-0 -z-1 h-[242px] w-[360px] lg:h-[506px] lg:w-[762px]">
@@ -21,8 +50,8 @@ export const InfoContacts = () => {
           alt="карта розташування майстерні"
         />
       </div>
-      <div className="grid pt-11 lg:grid-cols-2 lg:pt-20">
-        <div className="ml-9 lg:ml-36">
+      <div className="lg:pt-15 grid pt-11 lg:grid-cols-2">
+        <div className="order-1 ml-9 lg:ml-36">
           <div className="flex items-center ">
             <h2 className="font-birdman text-3xl text-primary lg:text-5xl">
               {'>>>'}
@@ -31,7 +60,7 @@ export const InfoContacts = () => {
               контакти та інформація
             </h1>
           </div>
-          <div className="mr-9 mt-11 font-jost text-sm lg:mt-20">
+          <div className="mr-9 mt-11 font-jost text-sm lg:mt-12">
             <p>
               Ласкаво просимо до нашої автомайстерні! Ми спеціалізуємося на
               обслуговуванні та відновленні автомобілів, надаючи повний спектр
@@ -58,45 +87,30 @@ export const InfoContacts = () => {
             </p>
           </div>
         </div>
-        <div className="mt-20 grid gap-y-8 bg-primary-light pb-9 pl-9 pt-9 font-jost text-sm text-white/50 lg:rounded-[0px_30px_30px_0px] lg:pl-36">
-          <div className="flex items-center">
-            <div className="mr-5">
-              <PhoneIcon />
-            </div>
-            <div>
-              <a href={`tel:${PHONE_MAIN.machineView}`}>
-                {PHONE_MAIN.humanView}
-              </a>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className="mr-5">
-              <PhoneIcon />
-            </div>
-            <div>
-              <a href={`tel:${PHONE_SECOND.machineView}`}>
-                {PHONE_SECOND.humanView}
-              </a>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className="mr-5">
-              <EnvelopeIcon />
-            </div>
-            <div>
-              <a href={`mailto:${MAILING_ADDRESS}`}>{MAILING_ADDRESS}</a>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className="mr-5">
-              <MapIcon />
-            </div>
-            <div>
-              <a href={STREET_ADDRESS.googleURL} target="_blank">
-                {STREET_ADDRESS.name}
-              </a>
-            </div>
-          </div>
+        <div className="order-3 mt-5 justify-self-center lg:order-2 lg:row-span-2 lg:mt-0 lg:self-end">
+          <iframe
+            height="400px"
+            width="349px"
+            style={{
+              borderRadius: '30px',
+              filter:
+                'invert(100%) sepia(60%) saturate(30%) hue-rotate(200deg) brightness(120%) contrast(90%)',
+            }}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy={'no-referrer-when-downgrade'}
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d81478.14670379752!2d30.2831327!3d50.3443226!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4b58f182ce8dd%3A0xa6813908eeb7426!2z0JXQn9CG0KbQldCd0KLQoA!5e0!3m2!1suk!2sua!4v1692719804046!5m2!1suk!2sua"
+          ></iframe>
+        </div>
+        <div className="order-2 mt-12 grid gap-y-8 bg-primary-light pb-9 pl-9 pt-9 font-jost text-sm text-white/50 lg:order-3 lg:rounded-[0px_30px_30px_0px] lg:pl-36">
+          {contacts.map((i) => (
+            <ContactsContainerItem
+              key={i.key}
+              iconComponent={i.icon}
+              contactDataHumanView={i.contactDataHumanView}
+              contactDataLinkView={i.contactDataLinkView}
+            />
+          ))}
         </div>
       </div>
     </div>
