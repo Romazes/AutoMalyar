@@ -19,19 +19,17 @@ export const Navbar = () => {
       </div>
       <div className="hidden md:block">
         <ul className="flex gap-16">
-          <li>
-            <Link href="#" className="text-white">
-              Головна
-            </Link>
+          <li className="hover:text-white">
+            <Link href="#main-section">Головна</Link>
           </li>
-          <li>
-            <Link href="#">Сервіси</Link>
+          <li className="hover:text-white">
+            <Link href="#painting-section">Сервіси</Link>
           </li>
-          <li>
-            <Link href="#">Контакти</Link>
+          <li className="hover:text-white">
+            <Link href="#info-contacts-section">Контакти</Link>
           </li>
-          <li>
-            <Link href="#">галерея</Link>
+          <li className="hover:text-white">
+            <Link href="#gallery-section">галерея</Link>
           </li>
         </ul>
       </div>

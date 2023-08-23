@@ -41,7 +41,10 @@ export const WorkshopGallery = () => {
   ];
 
   return (
-    <div className="grid select-none lg:grid-cols-[1.185fr_1fr_1fr]">
+    <div
+      id="gallery-section"
+      className="grid select-none lg:grid-cols-[1.185fr_1fr_1fr]"
+    >
       <div className="lg:row-span-2">
         <WorkshopGalleryCarousel images={imageList.slice(0, 2)} />
       </div>

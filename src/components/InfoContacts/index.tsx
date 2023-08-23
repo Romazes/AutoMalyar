@@ -43,7 +43,7 @@ export const InfoContacts = () => {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative" id="info-contacts-section">
       <div className="absolute left-0 top-0 -z-1 h-[242px] w-[360px] lg:h-[506px] lg:w-[762px]">
         <Image
           src={BackgroundInfoContactsImg}

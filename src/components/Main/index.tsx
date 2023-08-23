@@ -9,6 +9,7 @@ import { Button } from '@/components/Buttons';
 export const Main = () => {
   return (
     <div
+      id="main-section"
       //92px - height of NavBar
       className="flex flex-col-reverse md:h-[calc(100vh-92px)] md:flex-row"
     >
