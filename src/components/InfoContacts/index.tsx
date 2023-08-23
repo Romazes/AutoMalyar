@@ -99,7 +99,7 @@ export const InfoContacts = () => {
             loading="lazy"
             allowFullScreen
             referrerPolicy={'no-referrer-when-downgrade'}
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d81478.14670379752!2d30.2831327!3d50.3443226!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4b58f182ce8dd%3A0xa6813908eeb7426!2z0JXQn9CG0KbQldCd0KLQoA!5e0!3m2!1suk!2sua!4v1692719804046!5m2!1suk!2sua"
+            src={STREET_ADDRESS.googleMapEmbedURL}
           ></iframe>
         </div>
         <div className="order-2 mt-12 grid gap-y-8 bg-primary-light pb-9 pl-9 pt-9 font-jost text-sm text-white/50 lg:order-3 lg:rounded-[0px_30px_30px_0px] lg:pl-36">
