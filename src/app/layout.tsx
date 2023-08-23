@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import type { PropsWithChildren } from 'react';
 
 import logo from '@/../public/images/logo.png';
+import { Footer } from '@/components/Footer';
 import { Navbar } from '@/components/Navbar';
 import { fontDameron, fontJost, fontBirdman } from '@/shared/fonts';
 
@@ -37,6 +38,7 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

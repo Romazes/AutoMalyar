@@ -45,6 +45,7 @@ module.exports = {
         'primary-cyan': '#1CFFF1',
       },
       margin: {
+        '17-5': '4.375rem',
         18: '4.688rem',
         19: '4.75rem',
         30: '7.5rem',
