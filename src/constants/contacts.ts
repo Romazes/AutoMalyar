@@ -15,5 +15,5 @@ export const STREET_ADDRESS = {
 };
 export const SOCIAL_NETWORK_LINKS = {
   instagram: 'https://www.instagram.com/pokr.aska318/',
-  tiktok: 'https://www.tiktok.com/@user3846946853804'
-}
+  tiktok: 'https://www.tiktok.com/@user3846946853804',
+};
