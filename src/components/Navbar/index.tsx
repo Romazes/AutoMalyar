@@ -42,24 +42,35 @@ export const Navbar = () => {
         className="z-4 my-9 cursor-pointer justify-self-end md:hidden"
         onClick={handleClick}
       >
-        <HamburgerIcon />
+        <HamburgerIcon isOpen={isMobileNavBarOpen} />
       </div>
       <div
-        className={clsx('md:block', isMobileNavBarOpen ? 'z-4 col-span-2 mt-16' : 'hidden')}
+        className={clsx(
+          'md:block',
+          isMobileNavBarOpen ? 'z-4 col-span-2 mt-16' : 'hidden',
+        )}
       >
         <div className="text-center md:block">
           <ul className="flex flex-col gap-16 md:flex-row">
             <li className="hover:text-white">
-              <Link href="#main-section" onClick={handleClick}>Головна</Link>
+              <Link href="#main-section" onClick={handleClick}>
+                Головна
+              </Link>
             </li>
             <li className="hover:text-white">
-              <Link href="#painting-section" onClick={handleClick}>Сервіси</Link>
+              <Link href="#painting-section" onClick={handleClick}>
+                Сервіси
+              </Link>
             </li>
             <li className="hover:text-white">
-              <Link href="#info-contacts-section" onClick={handleClick}>Контакти</Link>
+              <Link href="#info-contacts-section" onClick={handleClick}>
+                Контакти
+              </Link>
             </li>
             <li className="hover:text-white">
-              <Link href="#gallery-section" onClick={handleClick}>галерея</Link>
+              <Link href="#gallery-section" onClick={handleClick}>
+                галерея
+              </Link>
             </li>
           </ul>
         </div>

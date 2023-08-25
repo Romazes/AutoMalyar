@@ -2,13 +2,16 @@ import type { FC } from 'react';
 
 import type { BaseIconProps } from '@/types/baseIcon';
 
-type HamburgerIconProps = BaseIconProps;
+interface HamburgerIconProps extends BaseIconProps {
+  isOpen: boolean;
+}
 
 export const HamburgerIcon: FC<HamburgerIconProps> = ({
   width = 32,
   height = 32,
   strokeWidth = 0.5,
   stroke = 'white',
+  isOpen = true,
   ...props
 }) => {
   return (
@@ -26,16 +29,13 @@ export const HamburgerIcon: FC<HamburgerIconProps> = ({
         <animate
           dur="0.2s"
           attributeName="d"
-          values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7"
+          values={
+            isOpen
+              ? 'M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7'
+              : 'M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7'
+          }
+          begin={isOpen ? 'start.begin' : 'reverse.begin'}
           fill="freeze"
-          begin="start.begin"
-        />
-        <animate
-          dur="0.2s"
-          attributeName="d"
-          values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7"
-          fill="freeze"
-          begin="reverse.begin"
         />
       </path>
       <rect width="10" height="10" stroke="none">
