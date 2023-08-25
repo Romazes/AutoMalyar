@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import React, { useMemo, useState } from 'react';
 
+import { useScrollBlock } from '../helpers/useScrollBlock';
 import { HamburgerIcon } from '../icons/Hamburger';
 import { LogoAutoMalyar } from '../icons/Logo';
 import { InstagramIcon } from '../icons/SocialNetworks/Instagram';
@@ -11,14 +12,25 @@ import { TikTokIcon } from '../icons/SocialNetworks/TikTok';
 import { SOCIAL_NETWORK_LINKS } from '@/constants/contacts';
 
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMobileNavBarOpen, setIsMobileNavBarOpen] = useState(false);
   const year = useMemo(() => new Date().getFullYear(), []);
+  const [blockScroll, allowScroll] = useScrollBlock();
+
+  const handleClick = () => {
+    setIsMobileNavBarOpen(!isMobileNavBarOpen);
+
+    if (!isMobileNavBarOpen) {
+      blockScroll();
+    } else {
+      allowScroll();
+    }
+  };
 
   return (
     <nav
       className={clsx(
         'grid grid-cols-2 items-center bg-primary px-9 font-jost uppercase text-white/30 md:grid-cols-none md:px-12 lg:pl-20 lg:pr-16',
-        isOpen
+        isMobileNavBarOpen
           ? 'grid-rows-[auto_1fr_1fr]'
           : 'md:grid-flow-col md:justify-between',
       )}
@@ -28,26 +40,26 @@ export const Navbar = () => {
       </div>
       <div
         className="z-4 my-9 cursor-pointer justify-self-end md:hidden"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={handleClick}
       >
         <HamburgerIcon />
       </div>
       <div
-        className={clsx('md:block', isOpen ? 'z-4 col-span-2 mt-16' : 'hidden')}
+        className={clsx('md:block', isMobileNavBarOpen ? 'z-4 col-span-2 mt-16' : 'hidden')}
       >
         <div className="text-center md:block">
           <ul className="flex flex-col gap-16 md:flex-row">
             <li className="hover:text-white">
-              <Link href="#main-section">Головна</Link>
+              <Link href="#main-section" onClick={handleClick}>Головна</Link>
             </li>
             <li className="hover:text-white">
-              <Link href="#painting-section">Сервіси</Link>
+              <Link href="#painting-section" onClick={handleClick}>Сервіси</Link>
             </li>
             <li className="hover:text-white">
-              <Link href="#info-contacts-section">Контакти</Link>
+              <Link href="#info-contacts-section" onClick={handleClick}>Контакти</Link>
             </li>
             <li className="hover:text-white">
-              <Link href="#gallery-section">галерея</Link>
+              <Link href="#gallery-section" onClick={handleClick}>галерея</Link>
             </li>
           </ul>
         </div>
@@ -55,7 +67,7 @@ export const Navbar = () => {
       <div
         className={clsx(
           'md:hidden',
-          isOpen ? 'z-4 col-span-2 grid gap-y-10' : 'hidden',
+          isMobileNavBarOpen ? 'z-4 col-span-2 grid gap-y-10' : 'hidden',
         )}
       >
         <div>
