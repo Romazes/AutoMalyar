@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 
-const safeDocument: Document | null = typeof window === 'undefined' ? null : document;
+const safeDocument: Document | null =
+  typeof window === 'undefined' ? null : document;
 
 /**
  * Usage:
@@ -8,7 +9,7 @@ const safeDocument: Document | null = typeof window === 'undefined' ? null : doc
  */
 export const useScrollBlock = (): [() => void, () => void] => {
   const scrollBlocked = useRef(false);
-  
+
   if (!safeDocument) {
     const emptyFunction = () => {};
     return [emptyFunction, emptyFunction];
