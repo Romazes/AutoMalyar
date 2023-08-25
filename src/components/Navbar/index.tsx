@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import React, { useMemo, useState } from 'react';
 
-import { useScrollBlock } from '../helpers/useScrollBlock';
+import { useScrollBlock } from '../../helpers/useScrollBlock';
 import { HamburgerIcon } from '../icons/Hamburger';
 import { LogoAutoMalyar } from '../icons/Logo';
 import { InstagramIcon } from '../icons/SocialNetworks/Instagram';
