@@ -16,10 +16,10 @@ export const Navbar = () => {
   const year = useMemo(() => new Date().getFullYear(), []);
   const [blockScroll, allowScroll] = useScrollBlock();
 
-  const handleClick = () => {
-    setIsMobileNavBarOpen(!isMobileNavBarOpen);
+  const handleClick = (isOpenMobileNavBar: boolean = true) => {
+    setIsMobileNavBarOpen(isOpenMobileNavBar);
 
-    if (!isMobileNavBarOpen) {
+    if (isOpenMobileNavBar) {
       blockScroll();
     } else {
       allowScroll();
@@ -40,7 +40,7 @@ export const Navbar = () => {
       </div>
       <div
         className="z-4 my-9 cursor-pointer justify-self-end md:hidden"
-        onClick={handleClick}
+        onClick={() => handleClick(!isMobileNavBarOpen)}
       >
         <HamburgerIcon isOpen={isMobileNavBarOpen} />
       </div>
@@ -53,22 +53,22 @@ export const Navbar = () => {
         <div className="text-center md:block">
           <ul className="flex flex-col gap-16 md:flex-row">
             <li className="hover:text-white">
-              <Link href="#main-section" onClick={handleClick}>
+              <Link href="#main-section" onClick={() => handleClick(false)}>
                 Головна
               </Link>
             </li>
             <li className="hover:text-white">
-              <Link href="#painting-section" onClick={handleClick}>
+              <Link href="#painting-section" onClick={() => handleClick(false)}>
                 Сервіси
               </Link>
             </li>
             <li className="hover:text-white">
-              <Link href="#info-contacts-section" onClick={handleClick}>
+              <Link href="#info-contacts-section" onClick={() => handleClick(false)}>
                 Контакти
               </Link>
             </li>
             <li className="hover:text-white">
-              <Link href="#gallery-section" onClick={handleClick}>
+              <Link href="#gallery-section" onClick={() => handleClick(false)}>
                 галерея
               </Link>
             </li>
