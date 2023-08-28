@@ -68,7 +68,7 @@ export const CarPaintingContainer = () => {
           окремі деталі
         </button>
       </div>
-      <div className="col-span-2 mt-[4.375rem] md:col-span-1 md:mt-0">
+      <div className="col-span-2 mt-[4.375rem] md:col-span-1 md:mt-0 pr-[18px]">
         <div className="grid grid-cols-2 gap-y-5 md:grid-cols-1">
           {paintTypes.map(({ id, paintImage, paintName }) => (
             <PaintTypeWithRoundShapeColor
