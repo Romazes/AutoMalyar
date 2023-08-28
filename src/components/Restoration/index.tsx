@@ -8,7 +8,7 @@ import BottomPositionFixedCar from '@/../public/images/restore-fixed-car.png';
 
 export const Restoration = () => {
   return (
-    <div className="relative grid gap-y-9 md:grid-cols-2">
+    <div className="relative mt-10 grid gap-y-9 md:grid-cols-2">
       <div className="absolute left-0 top-0 h-[242px] w-[360px] lg:h-[506px] lg:w-[762px]">
         <Image src={BackgroundNumberImg} alt="цифра 02" />
       </div>

@@ -31,7 +31,7 @@ export const WorkshopGalleryCarousel: FC<IWorkshopGalleryCarouselProps> = ({
     >
       {images.map((x) => (
         <div key={x.id}>
-          <Image src={x.img} alt={x.imgAlt} />
+          <Image src={x.img} alt={x.imgAlt} placeholder="blur" />
         </div>
       ))}
     </Carousel>

@@ -101,7 +101,10 @@ export const InfoContacts = () => {
             src={STREET_ADDRESS.googleMapEmbedURL}
           ></iframe>
         </div>
-        <div id="info-contacts-section" className="order-2 mt-12 grid gap-y-8 bg-primary-light pb-9 pl-9 pt-9 font-jost text-sm text-white/50 lg:order-3 lg:rounded-[0px_30px_30px_0px] lg:pl-36">
+        <div
+          id="info-contacts-section"
+          className="order-2 mt-12 grid gap-y-8 bg-primary-light pb-9 pl-9 pt-9 font-jost text-sm text-white/50 lg:order-3 lg:rounded-[0px_30px_30px_0px] lg:pl-36"
+        >
           {contacts.map((i) => (
             <ContactsContainerItem
               key={i.key}

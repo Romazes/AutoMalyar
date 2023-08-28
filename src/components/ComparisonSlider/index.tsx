@@ -97,6 +97,7 @@ const ComparisonSlider: FC<IComparisonSliderProps> = ({
         alt={bottomImgAlt}
         className="pointer-events-none absolute block h-full w-full select-none object-cover"
         draggable="false"
+        placeholder="blur"
       />
       <Image
         src={bottomImg}
@@ -104,6 +105,7 @@ const ComparisonSlider: FC<IComparisonSliderProps> = ({
         className="pointer-events-none absolute block h-full w-full select-none object-cover"
         draggable="false"
         ref={topImageRef}
+        placeholder="blur"
       />
       <div
         ref={lineCompareRef}

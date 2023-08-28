@@ -63,6 +63,7 @@ export const FullRestorationImportedCar = () => {
           <Image
             src={LicensePlates}
             alt="автомобільні номерні знаки з різних країн"
+            placeholder="blur"
           />
         </div>
       </div>

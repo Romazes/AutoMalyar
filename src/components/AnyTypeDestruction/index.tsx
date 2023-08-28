@@ -35,11 +35,13 @@ export const AnyTypeDestruction = () => {
           <Image
             src={RightSideDestructionCarLensImg}
             alt="збільшене зображення сколу на автівці"
+            placeholder="blur"
           />
         </div>
         <Image
           src={RightSideDestructionCarImg}
           alt="приклад сколу на автівці з правого боку на крилі"
+          placeholder="blur"
         />
       </div>
       <div className="order-1 flex flex-col">

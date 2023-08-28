@@ -10,7 +10,10 @@ import BackgroundNumberImg from '@/../public/images/bg-number-01.png';
 
 export const Dyeing = () => {
   return (
-    <div id="painting-section" className="relative grid gap-y-9 lg:grid-cols-2">
+    <div
+      id="painting-section"
+      className="relative mt-10 grid gap-y-9 lg:grid-cols-2"
+    >
       <div className="absolute left-0 top-0 h-[232px] w-[188px] lg:h-[490px] lg:w-[396px]">
         <Image src={BackgroundNumberImg} alt="цифра 01" />
       </div>
@@ -25,10 +28,10 @@ export const Dyeing = () => {
         </div>
         <div className="mt-12 md:mt-24">
           <p>
-            Ми пропонуємо різні види фарбування. Від рами до невеликої частини
-            вашого особистого автомобіля. Наші барвники виготовлені з
-            високоякісних матеріалів. Він сумісний з будь-яким автомобілем,
-            оскільки має ліцензію наших постачальників.
+            Ми пропонуємо різні види фарбування. Від повної покраски до
+            невеликої частини вашого особистого автомобіля. Наші барвники
+            виготовлені з високоякісних матеріалів. Він сумісний з будь-яким
+            автомобілем, оскільки має ліцензію наших постачальників.
           </p>
           <p className="mt-8">
             Ви можете вибрати між <span className="text-primary">повним</span>{' '}

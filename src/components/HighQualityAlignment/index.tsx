@@ -15,7 +15,7 @@ export const HighQualityAlignment = () => {
     <div className="mt-14 grid font-jost lg:mt-6 lg:grid-cols-2">
       <div className="order-2 grid auto-rows-max bg-[#1B1B1B] lg:order-1 lg:row-span-2">
         <div className="pt-10">
-          <Image src={img} alt="пошкоджені двері машини" />
+          <Image src={img} alt="пошкоджені двері машини" placeholder="blur" />
         </div>
         <div className="flex h-[70px] justify-evenly text-xl">
           <button onClick={() => setImg(BrokenDoor)}>До</button>

@@ -63,7 +63,10 @@ export const Navbar = () => {
               </Link>
             </li>
             <li className="hover:text-white">
-              <Link href="#info-contacts-section" onClick={() => handleClick(false)}>
+              <Link
+                href="#info-contacts-section"
+                onClick={() => handleClick(false)}
+              >
                 Контакти
               </Link>
             </li>
