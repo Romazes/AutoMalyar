@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
 import { LogoAutoMalyar } from '../icons/Logo';
+import { LinkPrimary } from '../Links';
 
 import GradientArrow from '@/../public/icons/gradient-arrow.svg';
 import FerrariBgImage from '@/../public/images/ferrari_main_shadow.png';
-import { Button } from '@/components/Buttons';
 
 export const Main = () => {
   return (
@@ -25,7 +25,7 @@ export const Main = () => {
             </p>
           </div>
           <div className="mt-10 md:mt-4 lg:mt-20">
-            <Button>Почнемо</Button>
+            <LinkPrimary href="#painting-section">Почнемо</LinkPrimary>
           </div>
           <div className="mt-20 flex flex-wrap gap-x-14 gap-y-4 font-jost text-xl text-white/40 md:mt-4 md:flex-nowrap lg:mt-20">
             <div>

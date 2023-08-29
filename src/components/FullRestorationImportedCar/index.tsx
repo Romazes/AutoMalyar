@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
-import { Button } from '../Buttons';
 import { DownArrowHalfRound } from '../icons/DownArrowHalfRound';
 import { RightArrowThinIcon } from '../icons/RightArrowThin';
+import { LinkPrimary } from '../Links';
 
 import BackgroundNumberImg from '@/../public/images/bg-number-03.png';
 import LicensePlates from '@/../public/images/license-plates.png';
@@ -29,7 +29,7 @@ export const FullRestorationImportedCar = () => {
 
   return (
     <div className="relative mt-11">
-      <div className="absolute left-0 top-0 h-[242px] w-[360px] lg:h-[506px] lg:w-[762px]">
+      <div className="absolute left-0 top-0 -z-1 h-[242px] w-[360px] lg:h-[506px] lg:w-[762px]">
         <Image src={BackgroundNumberImg} alt="цифра 03" />
       </div>
       <div className="grid lg:grid-cols-2">
@@ -56,7 +56,12 @@ export const FullRestorationImportedCar = () => {
             </p>
           </div>
           <div className="mr-9 mt-14">
-            <Button className="w-full text-base">Записатися на Огляд</Button>
+            <LinkPrimary
+              className="w-full text-base"
+              href="#info-contacts-section"
+            >
+              Записатися на Огляд
+            </LinkPrimary>
           </div>
         </div>
         <div className="static ml-auto lg:absolute lg:bottom-0 lg:right-0 lg:top-0 lg:mt-[-80px]">

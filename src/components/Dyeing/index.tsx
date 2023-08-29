@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 import { CarPaintingContainer } from './CarPaintingContainer';
 
-import { Button } from '../Buttons';
-import { ButtonOutline } from '../Buttons/ButtonOutline';
 import { LabelBetweenPage } from '../Label/LabelBetweenPage';
+import { LinkPrimary } from '../Links';
+import { LinkOutline } from '../Links/LinkOutline';
 
 import BackgroundNumberImg from '@/../public/images/bg-number-01.png';
 
@@ -45,10 +45,15 @@ export const Dyeing = () => {
       </div>
       <div className="flex flex-col gap-y-7 px-9 lg:mx-36 lg:px-0">
         <div>
-          <Button className="w-full text-base">Обрати Стиль</Button>
+          <LinkPrimary
+            href="#info-contacts-section"
+            className="w-full text-base"
+          >
+            Обрати Стиль
+          </LinkPrimary>
         </div>
         <div>
-          <ButtonOutline>наша галерея</ButtonOutline>
+          <LinkOutline href="#gallery-section">наша галерея</LinkOutline>
         </div>
       </div>
       <div className="justify-self-center lg:col-span-2">

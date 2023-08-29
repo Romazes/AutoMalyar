@@ -2,8 +2,8 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-import { Button } from '../Buttons';
-import { ButtonOutline } from '../Buttons/ButtonOutline';
+import { LinkPrimary } from '../Links';
+import { LinkOutline } from '../Links/LinkOutline';
 
 import BrokenDoor from '@/../public/images/broken-door.png';
 import FixedDoor from '@/../public/images/fixed-door.png';
@@ -55,10 +55,15 @@ export const HighQualityAlignment = () => {
       </div>
       <div className="order-3 mt-11 flex flex-col gap-y-7 px-9 lg:mx-36 lg:mt-16 lg:justify-self-center lg:px-0">
         <div>
-          <Button className="w-full text-base">Записатися на Огляд</Button>
+          <LinkPrimary
+            className="w-full text-base"
+            href="#info-contacts-section"
+          >
+            Записатися на Огляд
+          </LinkPrimary>
         </div>
         <div>
-          <ButtonOutline>наша галерея</ButtonOutline>
+          <LinkOutline href="#gallery-section">наша галерея</LinkOutline>
         </div>
       </div>
     </div>
