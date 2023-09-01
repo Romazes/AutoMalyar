@@ -15,7 +15,7 @@ export const Footer = () => {
       </div>
       <div className="order-1 col-span-2 flex gap-x-16 lg:order-2 lg:col-auto">
         <div className="flex gap-x-5">
-          <div>Більше проектів тут:</div>
+          <div>Більше проєктів тут:</div>
           <a href={SOCIAL_NETWORK_LINKS.instagram} target="_blank">
             <InstagramIcon />
           </a>
@@ -26,7 +26,7 @@ export const Footer = () => {
       </div>
       <div className="order-3 flex lg:justify-self-end">
         <div className="hidden">Credits</div>
-        <div>© {year} «Automalyar».Всі права захищені.</div>
+        <div>© {year} «Automalyar». Всі права захищені.</div>
       </div>
     </footer>
   );
