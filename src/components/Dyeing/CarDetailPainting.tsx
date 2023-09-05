@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type { FC, SVGProps } from 'react';
+import { useRef, type FC, type SVGProps, useEffect } from 'react';
 
 export interface ICarDetailPaintingProps extends SVGProps<SVGSVGElement> {}
 
@@ -9,28 +9,42 @@ export const CarDetailPainting: FC<ICarDetailPaintingProps> = ({
   className,
   ...props
 }) => {
-  let previousFillElement: SVGPathElement = {} as SVGPathElement;
+  const svgRef = useRef<SVGSVGElement>(null);
 
-  const onDetailClick = (event: React.MouseEvent) => {
-    const currentElement = event.target as SVGPathElement;
-
-    if (currentElement.id && !currentElement.hasAttribute('fill')) {
-      currentElement.setAttribute('fill', '#ffffff');
+  function startAnimate(
+    svgNodeList: NodeListOf<ChildNode>,
+    delayMs: number = 1000,
+  ) {
+    function removeClass(svgPath: SVGPathElement) {
+      svgPath.classList.remove('animate-fade', 'fill-white');
     }
+    svgNodeList.forEach((svgPath, key) => {
+      setTimeout(() => {
+        const currentEl = svgPath as SVGPathElement;
+        currentEl.classList.add('animate-fade', 'fill-white');
 
-    if (
-      previousFillElement &&
-      previousFillElement.id &&
-      currentElement instanceof SVGPathElement &&
-      currentElement !== previousFillElement
-    ) {
-      previousFillElement.removeAttribute('fill');
-    }
+        if (key > 0) {
+          removeClass(svgNodeList[key - 1] as SVGPathElement);
+        }
+      }, key * delayMs);
+    });
 
-    if (currentElement instanceof SVGPathElement) {
-      previousFillElement = currentElement;
+    removeClass(svgNodeList[svgNodeList.length - 1] as SVGPathElement);
+  }
+
+  useEffect(() => {
+    const delayMs = 1000;
+    const svgNodeList = svgRef.current?.childNodes;
+    if (svgNodeList) {
+      startAnimate(svgNodeList, delayMs);
+      setInterval(
+        () => {
+          startAnimate(svgNodeList, delayMs);
+        },
+        svgNodeList.length * delayMs,
+      );
     }
-  };
+  }, [svgRef]);
 
   return (
     <svg
@@ -39,7 +53,6 @@ export const CarDetailPainting: FC<ICarDetailPaintingProps> = ({
       viewBox="0 0 508 316"
       fill="none"
       pointerEvents="all"
-      onClick={onDetailClick}
       preserveAspectRatio="xMidYMid meet"
       className={clsx('h-full w-full', className)}
       fillOpacity={0.4}
@@ -48,6 +61,7 @@ export const CarDetailPainting: FC<ICarDetailPaintingProps> = ({
       xmlSpace="preserve"
       strokeLinejoin="bevel"
       strokeMiterlimit={10}
+      ref={svgRef}
       {...props}
     >
       <path

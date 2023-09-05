@@ -60,6 +60,15 @@ module.exports = {
         3: '3',
         4: '4',
       },
+      keyframes: {
+        fade: {
+          '0%': { 'fill-opacity': '0' },
+          '100%': { 'fill-opacity': '0.4' },
+        },
+      },
+      animation: {
+        fade: 'fade 0.8s ease-out forwards',
+      },
     },
   },
   plugins: [],

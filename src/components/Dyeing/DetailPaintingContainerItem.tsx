@@ -6,7 +6,7 @@ import DetailCarPaint from '@/../public/images/detail-paint-car.png';
 
 export const DetailPaintingContainerItem = () => {
   return (
-    <div className="mt-10 max-h-[422.66px] max-w-[764px] md:mt-0">
+    <div className="mt-11 max-h-[422.66px] max-w-[764px] md:mt-0">
       <div className="relative mx-14">
         <div>
           <CarDetailPainting className="relative z-2" />
@@ -16,7 +16,7 @@ export const DetailPaintingContainerItem = () => {
             className="absolute top-0 z-1 w-full opacity-50"
           />
         </div>
-        <div className="pr-[18px] text-sm">
+        <div className="mt-11 md:mt-0 pr-[18px] text-sm">
           Ви також можете здійснити фарбування окремих деталей свого авто. Це
           дуже зручно, економить ваш час і гроші. Наші майстрі дуже уважно
           відносять до підбору фарби, щоб вона не відрізнялася від других частин
