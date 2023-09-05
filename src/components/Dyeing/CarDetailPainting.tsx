@@ -37,12 +37,9 @@ export const CarDetailPainting: FC<ICarDetailPaintingProps> = ({
     const svgNodeList = svgRef.current?.childNodes;
     if (svgNodeList) {
       startAnimate(svgNodeList, delayMs);
-      setInterval(
-        () => {
-          startAnimate(svgNodeList, delayMs);
-        },
-        svgNodeList.length * delayMs,
-      );
+      setInterval(() => {
+        startAnimate(svgNodeList, delayMs);
+      }, svgNodeList.length * delayMs);
     }
   }, [svgRef]);
 
