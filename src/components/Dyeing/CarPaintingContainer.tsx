@@ -135,7 +135,7 @@ export const CarPaintingContainer = () => {
           окремі деталі
         </button>
       </div>
-      <div className="col-span-3 md:mt-14">{paintBlock()}</div>
+      <div className="col-span-3 md:mt-14 h-[649px] lg:h-[419px] lg:w-[512px] xl:h-[522px] xl:w-[956px]">{paintBlock()}</div>
       <div className="col-span-3 mb-6 ml-6 mt-16 text-xs md:mb-11 md:ml-11">
         <p>*візуалізація, а не остаточний вигляд вашого автомобіля</p>
       </div>
