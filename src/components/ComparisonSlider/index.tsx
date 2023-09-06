@@ -95,14 +95,14 @@ const ComparisonSlider: FC<IComparisonSliderProps> = ({
       <Image
         src={topImg}
         alt={bottomImgAlt}
-        className="pointer-events-none absolute block h-full w-full select-none object-cover"
+        className="pointer-events-none absolute block h-full w-full object-cover"
         draggable="false"
         placeholder="blur"
       />
       <Image
         src={bottomImg}
         alt={topImgAlt}
-        className="pointer-events-none absolute block h-full w-full select-none object-cover"
+        className="pointer-events-none absolute block h-full w-full object-cover"
         draggable="false"
         ref={topImageRef}
         placeholder="blur"
