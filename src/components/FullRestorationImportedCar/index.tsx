@@ -64,7 +64,7 @@ export const FullRestorationImportedCar = () => {
             </LinkPrimary>
           </div>
         </div>
-        <div className="static ml-auto lg:absolute lg:bottom-0 lg:right-0 lg:top-0 lg:mt-[-80px]">
+        <div className="static ml-auto lg:absolute lg:bottom-0 lg:right-0 lg:top-0 lg:mt-[-80px] -z-1">
           <Image
             src={LicensePlates}
             alt="автомобільні номерні знаки з різних країн"
